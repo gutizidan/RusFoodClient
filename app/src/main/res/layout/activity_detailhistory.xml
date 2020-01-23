@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".detailhistory">
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginTop="-550dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bundar" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="10dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/edittext"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking"
+                android:textColor="@color/niga"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Atas nama : "
+                    android:textColor="@color/niga"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Ivan permana"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/niga"
+                    android:textSize="15dp"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas          : "
+                    android:textColor="@color/niga"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="XI RPL 1"
+                    android:textColor="@color/niga"
+                    android:layout_marginRight="20dp"
+                    android:textSize="15dp"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pesanan     : "
+                    android:textColor="@color/niga"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="30dp"
+                    />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Nasi Kuning \n2. Nasi Jancok"
+                    android:lines="4"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/niga"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="30dp"
+                    />
+
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total        :"
+                    android:textColor="@color/niga"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Rp.8000"
+                    android:textColor="@color/niga"
+                    android:layout_marginRight="20dp"
+                    android:textSize="15dp"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Batas Waktu Ambil  : "
+                    android:textColor="@color/niga"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Istirahat 1"
+                    android:textColor="@color/niga"
+                    android:layout_marginRight="20dp"
+                    android:textSize="15dp"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nb : Hanya dapat diambil di RusMart"
+                    android:textColor="@color/niga"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="40dp"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <Button
+        android:id="@+id/bookbtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/buttonlog"
+        android:text="C A N C E L"
+        android:textColor="#fff"
+        android:textStyle="italic" />
+
+</RelativeLayout>

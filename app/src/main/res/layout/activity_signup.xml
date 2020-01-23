@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Signup">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginTop="-550dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bundar" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/rusmart" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Nama"
+            android:textSize="10dp"
+            android:textColorHint="#999999"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/edittext"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Kelas"
+            android:textSize="10dp"
+            android:textColorHint="#999999"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/edittext"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Username"
+            android:textSize="10dp"
+            android:textColorHint="#999999"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/edittext"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Password"
+            android:textSize="10dp"
+            android:textColorHint="#999999"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/edittext"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/buttonlog"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="S I G N  U P"
+            android:textColor="#fff"
+            android:textStyle="italic"
+            />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="11dp"
+        android:text="Nb : Application for Booking Only" />
+
+</RelativeLayout>

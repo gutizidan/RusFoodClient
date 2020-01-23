@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash">
+    <ImageView
+        android:layout_width="match_parent"
+        android:scaleX="1"
+        android:layout_height="800dp"
+        android:layout_marginTop="-350dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bundar" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        android:src="@drawable/rusmart" />
+
+    <Button
+        android:id="@+id/Buttonlog"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/buttonlog"
+        android:text="M A S U K"
+        android:textColor="#fff"
+        android:textStyle="italic" />
+    <Button
+        android:id="@+id/Buttonskip"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/buttonlog"
+        android:text="S K I P"
+        android:textColor="#fff"
+        android:textStyle="italic" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RusFood Client</string>
+    <string-array name="Time">
+        <item>Diambil Istirahat 1</item>
+        <item>Diambil Istirahat 2</item>
+    </string-array>
+</resources>
