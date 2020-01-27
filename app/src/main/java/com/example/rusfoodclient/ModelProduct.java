@@ -10,6 +10,7 @@ public class ModelProduct implements Parcelable {
     private String  image;
     private String  kategori;
     private String  deskripsi;
+    private int  id;
     public ModelProduct() {
 
     }
@@ -21,6 +22,7 @@ public class ModelProduct implements Parcelable {
         image = in.readString();
         kategori = in.readString();
         deskripsi = in.readString();
+        id = in.readInt();
     }
 
     public static final Creator<ModelProduct> CREATOR = new Creator<ModelProduct>() {
@@ -87,5 +89,14 @@ public class ModelProduct implements Parcelable {
         parcel.writeString(image);
         parcel.writeString(kategori);
         parcel.writeString(deskripsi);
+        parcel.writeInt(id);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

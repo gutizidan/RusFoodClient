@@ -1,20 +1,26 @@
 package com.example.rusfoodclient;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Menu_utama extends AppCompatActivity {
     private RecyclerView rvSurah;
     private adapterproduct allLeaguesAdapter;
-    ArrayList<ModelProduct> getKudus;
+    private ArrayList<ModelProduct> getKudus;
 
 
 
@@ -23,9 +29,9 @@ public class Menu_utama extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_utama);
         rvSurah = findViewById(R.id.recycler);
-        getKudus = (ArrayList<ModelProduct>) getIntent().getSerializableExtra("files");
+        getKudus = getArrayList("p");
+        System.out.println(getArrayList("p").size()+ "konto");
 
-        System.out.println(getKudus.size() + "dfgh");
 
         setup();
 
@@ -68,6 +74,14 @@ public class Menu_utama extends AppCompatActivity {
         alertDialog.show();
 
     }
+    public ArrayList<ModelProduct> getArrayList(String key){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Gson gson = new Gson();
+        String json = prefs.getString(key, null);
+        Type type = new TypeToken<ArrayList<ModelProduct>>() {}.getType();
+        return gson.fromJson(json, type);
+    }
+
 
 
     }

@@ -1,7 +1,9 @@
 package com.example.rusfoodclient;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -14,6 +16,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,12 +53,15 @@ public class pilihkategori extends AppCompatActivity {
                                         JSONObject hasil = (JSONObject) response.getJSONObject(i);
                                         ModelProduct item = new ModelProduct();
                                         item.setJudul(hasil.getString("name"));
+                                        item.setId(hasil.getInt("id"));
                                         item.setImage(hasil.getString("image"));
                                         item.setHarga(hasil.getString("rego"));
                                         item.setDeskripsi(hasil.getString("description"));
                                         System.out.println("sss" + hasil.getString("description"));
 
-                                        getKudus.add(item);}
+                                        getKudus.add(item);
+                                        saveArray(getKudus,"p");
+                                    }
                                     Intent i = new Intent(getApplicationContext(), Menu_utama.class);
                                     System.out.println(getKudus.size() +" hhh");
                                     i.putExtra("files",  getKudus);
@@ -94,16 +100,21 @@ public class pilihkategori extends AppCompatActivity {
                                         JSONObject hasil = (JSONObject) response.getJSONObject(i);
                                         ModelProduct item = new ModelProduct();
                                         item.setJudul(hasil.getString("name"));
+                                        item.setId(hasil.getInt("id"));
                                         item.setImage(hasil.getString("image"));
                                         item.setHarga(hasil.getString("rego"));
                                         item.setDeskripsi(hasil.getString("description"));
                                         System.out.println("sss" + hasil.getString("description"));
 
-                                        getKudus.add(item);}
+                                        getKudus.add(item);
+                                        saveArray(getKudus,"p");
+
+                                    }
                                     Intent i = new Intent(getApplicationContext(), Menu_utama.class);
                                     System.out.println(getKudus.size() +" hhh");
                                     i.putExtra("files",  getKudus);
                                     startActivity(i);
+
 
                                 }catch (JSONException e) {
                                     e.printStackTrace();
@@ -123,6 +134,14 @@ public class pilihkategori extends AppCompatActivity {
 
 
         });
+    }
+    public void saveArray(ArrayList<ModelProduct> list, String key){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = prefs.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(list);
+        editor.putString(key, json);
+        editor.apply();     // This line is IMPORTANT !!!
     }
 
 
